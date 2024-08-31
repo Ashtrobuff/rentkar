@@ -33,7 +33,7 @@ export const updateTodo = (id, todo) => async dispatch => {
 export const deleteTodo = (id) => async dispatch => {
   dispatch({ type: 'DELETE_TODO_REQUEST' });
   try {
-    await axios.delete(`https://rentkar-d3z1.onrender.com/${id}`);
+    await axios.delete(`https://rentkar-d3z1.onrender.com/todos/${id}`);
     dispatch({ type: 'DELETE_TODO_SUCCESS', payload: id });
   } catch (error) {
     console.log(error.message)
