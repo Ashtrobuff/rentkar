@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <SabParent/>
+    
       <h1>Todo List</h1>
       <input
         type="text"
@@ -62,7 +62,7 @@ function App() {
 export default App;
 */
 
-// App.js
+
 import React from 'react';
 import { useState,useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useNavigation } from 'react-router-dom';

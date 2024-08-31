@@ -4,6 +4,7 @@ import { getTodos, addTodo, updateTodo, deleteTodo } from './actions/todoActions
 import Modal from './Modal'
 import SabpaisaPaymentGateway from './SabpaisaPaymentGateway';
 import { useNavigate } from 'react-router-dom';
+import TodoCard from './components/Todocard';
 
 const TodoApp = () => {
     const [newTodo, setNewTodo] = useState('');
@@ -44,39 +45,44 @@ const TodoApp = () => {
     }
   return (
     <div style={{height:'100%',width:'100%',backgroundColor:'black', display:'flex', alignItems:'center',justifyContent:'center'}}>
-      <div className='bg-slate-400 flex flex-col p-10 rounded-lg w-fit'>
-        <h1 className='text-center mb-5 font-bold text-3xl'>My Todos</h1>
-        <div className='flex flex-row justify-evenly bg-slate-600 p-10 mb-2'>
-          <label>Todo Contents</label>
+      <div className='flex flex-col p-10 rounded-lg' style={{backgroundColor:"	#303030",width:800}}>
+        <h1 className='text-center mb-5 font-bold text-3xl text-white'>My Todos</h1>
+        <div className='flex flex-row justify-evenly  p-10 rounded-lg' style={{backgroundColor:"#707070"}}>
+      
       <input 
-      className='rounded-full p-2 w-full'
+      className='rounded-full p-5 w-full focus:outline-none  focus:outline-orange-400'
       placeholder='enter todo...'
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
       />
-      <button className='bg-orange-500 rounded-lg p-2 ml-10 flex flex-row w-full text-center items-center justify-center' onClick={handleAddTodo}>Add Todo</button>
+      <button className='bg-orange-500 font-bold text-2xl text-white  rounded-full p-2 ml-10 flex flex-row w-full text-center items-center justify-center focus:outline-none hover:scale-105' onClick={handleAddTodo}>Add Todo</button>
       </div>
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {!loading && !error && (
         <ul>
           {todos.map(todo => (
-            <li key={todo._id}>
-              <span
+           <div key={todo._id} className='rounded-md mt-2 flex flex-row justify-evenly p-5 mb-2' style={{backgroundColor:"#707070"}}>
+              <div 
                 onClick={() => handleUpdateTodo({ ...todo, completed: !todo.completed })}
                 style={{ textDecoration: todo.completed ? 'line-through' : 'none', cursor: 'pointer' }}
+                className='font-bold text-white w-40 flex items-center justify-center whitespace-nowrap overflow-hidden text-ellipsis block'
               >
+               
                 {todo.title}
-              </span>
-              <button onClick={() => openEditPopup(todo)}>Edit</button>
-              <button onClick={() => handleDeleteTodo(todo._id)}>Delete</button>
-            
-            </li>
+              </div>
+              <div>
+              <button className='bg-orange-500 px-5 font-bold text-white h-10 rounded-full mr-5' onClick={() => openEditPopup(todo)}>Edit</button>
+              <button className='bg-red-400 px-5 font-bold text-white h-10 rounded-full' onClick={() => handleDeleteTodo(todo._id)}>Delete</button>
+              </div>
+            </div>
+        
           ))}
         </ul>
       )}
   <button onClick={()=>removePay()}>Unsubscribe</button>
+  
       {editTodo && (
         <Modal
           todo={editTodo}

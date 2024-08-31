@@ -53,13 +53,13 @@ const SabParent= (props) => {
 
 
   return (
-    <div className="container-fluid bg-secondary text-white py-4">
+    <div className="container-fluid bg-secondary text-black py-4 font-bold">
       <form className='xyz' onSubmit={handleSubmit}>
         <div className="wrapper">
 
           <div className="row py-2">
             <div className="col-md-12 d-flex justify-content-center">
-              <h2 className='text-white bg-success px-2 py-1 rounded'>SabPaisa Payment Gateway</h2>
+              <h2 className='text-black bg-success px-2 py-1 rounded'>SabPaisa Payment Gateway</h2>
             </div>
           </div>
 
@@ -69,81 +69,81 @@ const SabParent= (props) => {
 
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Client Code : </label> <br />
-              <input type="text" placeholder='Client Code :' value={clientCode} onChange={(e) => setClientCode(e.target.value)} />
+              <input type="text " className='bg-slate-100 p-2' placeholder='Client Code :' value={clientCode} onChange={(e) => setClientCode(e.target.value)} />
             </div>
 
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Trnx User Name : </label> <br />
-              <input type="text" placeholder='Trnx User Name :' value={transUserName} onChange={(e) => setTransUserName(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Trnx User Name :' value={transUserName} onChange={(e) => setTransUserName(e.target.value)} />
             </div>
 
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Trnx User Password : </label> <br />
-              <input type="text" placeholder='Trnx User Password :' value={transUserPassword} onChange={(e) => setTransUserPassword(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Trnx User Password :' value={transUserPassword} onChange={(e) => setTransUserPassword(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Auth Key : </label> <br />
-              <input type="text" placeholder='Auth Key :' value={authkey} onChange={(e) => setAuthkey(e.target.value)} />
+              <input type="text"className='bg-slate-100 p-2' placeholder='Auth Key :' value={authkey} onChange={(e) => setAuthkey(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Auth IV : </label> <br />
-              <input type="text" placeholder='Auth IV :' value={authiv} onChange={(e) => setAuthiv(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Auth IV :' value={authiv} onChange={(e) => setAuthiv(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Name : </label> <br />
-              <input type="text" placeholder='Name :' value={payerName} onChange={(e) => setPayerName(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2'  placeholder='Name :' value={payerName} onChange={(e) => setPayerName(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Email : </label> <br />
-              <input type="text" placeholder='Email :' value={payerEmail} onChange={(e) => setPayerEmail(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Email :' value={payerEmail} onChange={(e) => setPayerEmail(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Phone : </label> <br />
-              <input type="text" placeholder='Phone :' value={payerMobile} onChange={(e) => setPayerMobile(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Phone :' value={payerMobile} onChange={(e) => setPayerMobile(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Amount : </label> <br />
-              <input type="text" placeholder='Amount :' value={amount} onChange={(e) => setAmount(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Amount :' value={amount} onChange={(e) => setAmount(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Client Trnx Id : </label> <br />
-              <input type="text" placeholder='Client Trnx Id :' value={clientTxnId} onChange={(e) => setclientTxnId(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Client Trnx Id :' value={clientTxnId} onChange={(e) => setclientTxnId(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor=""> Address : </label> <br />
-              <input type="text" placeholder='Address :' value={payerAddress} onChange={(e) => setPayerAddress(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Address :' value={payerAddress} onChange={(e) => setPayerAddress(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Callback Url : </label> <br />
-              <input type="text" placeholder='Callback Url :' value={callbackUrl} onChange={(e) => setCallbackUrl(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Callback Url :' value={callbackUrl} onChange={(e) => setCallbackUrl(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Data : </label> <br />
-              <input type="text" placeholder='Data :' value={data} onChange={(e) => setData(e.target.value)} />
+              <input type="text"className='bg-slate-100 p-2' placeholder='Data :' value={data} onChange={(e) => setData(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Udf1 : </label> <br />
-              <input type="text" placeholder='Udf 1 :' value={udf1} onChange={(e) => setudf1(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Udf 1 :' value={udf1} onChange={(e) => setudf1(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Udf 2 : </label> <br />
-              <input type="text" placeholder='Udf 2 :' value={udf2} onChange={(e) => setudf2(e.target.value)} />
+              <input type="text"  className='bg-slate-100 p-2' placeholder='Udf 2 :' value={udf2} onChange={(e) => setudf2(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Udf 3 : </label> <br />
-              <input type="text" placeholder='Udf 3 :' value={udf3} onChange={(e) => setudf3(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2'  placeholder='Udf 3 :' value={udf3} onChange={(e) => setudf3(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Channel ID : </label> <br />
-              <input type="text" placeholder='Channel Id :' value={channelId} onChange={(e) => setchannelId(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Channel Id :' value={channelId} onChange={(e) => setchannelId(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Program ID : </label> <br />
-              <input type="text" placeholder='Program Id :' value={programId} onChange={(e) => setprogramId(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='Program Id :' value={programId} onChange={(e) => setprogramId(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > MCC : </label> <br />
-              <input type="text" placeholder='MCC :' value={mcc} onChange={(e) => setmcc(e.target.value)} />
+              <input type="text" className='bg-slate-100 p-2' placeholder='MCC :' value={mcc} onChange={(e) => setmcc(e.target.value)} />
             </div>
             <div className="col-md-3 mb-3">
               <label htmlFor="" > Account Type : </label> <br />

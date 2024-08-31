@@ -38,5 +38,6 @@ export const deleteTodo = (id) => async dispatch => {
   } catch (error) {
     console.log(error.message)
     dispatch({ type: 'DELETE_TODO_FAILURE', payload: error.message });
+    console.log(error)
   }
 };
