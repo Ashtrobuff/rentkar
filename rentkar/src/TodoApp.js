@@ -63,7 +63,7 @@ const TodoApp = () => {
       {!loading && !error && (
         <ul>
           {todos.map(todo => (
-           <div key={todo._id} className='rounded-md mt-2 flex flex-row justify-evenly p-5 mb-2' style={{backgroundColor:"#707070"}}>
+           <div key={todo._id} className='rounded-md mt-2 flex flex-row justify-evenly p-5 mb-2' style={{backgroundColor:"#494949"}}>
               <div 
                 onClick={() => handleUpdateTodo({ ...todo, completed: !todo.completed })}
                 style={{ textDecoration: todo.completed ? 'line-through' : 'none', cursor: 'pointer' }}
