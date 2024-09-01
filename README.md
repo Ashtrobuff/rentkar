@@ -24,7 +24,12 @@ This application consists of a payment gateway integration using SabPaisa and a 
 - Conditionally renders a protected route (TodoApp) after successful payment
 - Utilizes local storage to manage payment status
 
-## Setup
+## Deployed Links
+[Backend service](https://www.genome.gov/)
+ - <h4 style="color:red">please wait for the backend service to spin up for atleast 50 seconds</h4>
+ 
+[Front end app](https://rentkar.vercel.app/payment)
+
 
 ### Prerequisites
 
@@ -115,6 +120,12 @@ react-payment-protected-route/
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+## Deployed Links
+[Backend service](https://www.genome.gov/)
+ - <h4 style="color:red">please wait for the backend service to spin up for atleast 50 seconds</h4>
+ 
+[Front end app](https://rentkar.vercel.app/payment)
 
 ## License
 
