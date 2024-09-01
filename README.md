@@ -65,6 +65,7 @@ This application consists of a payment gateway integration using SabPaisa and a 
 1. **Payment Process:**
    - The application initially displays the `PaymentPage` component.
    - Fill out the payment details and submit the form to process the payment through SabPaisa.
+   - <h5 style="color:green">JUST CLICK ON PROCEED WITHOUT ANY NEED TO FILL ADDITIONAL DETAILS<h3>
 
 2. **Payment Success:**
    - Upon successful payment, SabPaisa redirects back with a URL containing `status=SUCCESS`.
