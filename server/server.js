@@ -61,12 +61,18 @@ app.put('/todos/:id', async (req, res) => {
 });
 
 app.delete('/todos/:id', async (req, res) => {
+  const {id}=req.params;
   try {
-    const todo = await Todo.findById(req.params.id);
+    if (typeof id === 'undefined' || !ObjectId.isValid(id)) {
+   
+      return res.status(400).send('Invalid ID');
+    }else{
+    const todo = await Todo.findById(id);
     if (!todo) return res.status(404).json({ message: 'Todo not found' })
 
     await todo.deleteOne()
     res.json({ message: 'Todo deleted' });
+}
   } catch (err) {
     res.status(500).json({ message: err.message });
     console.log(err.message)

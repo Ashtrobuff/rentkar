@@ -70,7 +70,8 @@ const TodoApp = () => {
                 className='font-bold text-white w-40 flex items-center justify-center whitespace-nowrap overflow-hidden text-ellipsis block'
               >
                
-                {todo.title}
+                {todo._id}
+                {console.log(todo._id)}
               </div>
               <div>
               <button className='bg-orange-500 px-5 font-bold text-white h-10 rounded-full mr-5' onClick={() => openEditPopup(todo)}>Edit</button>
