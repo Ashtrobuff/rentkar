@@ -60,7 +60,7 @@ app.put('/todos/:id', async (req, res) => {
   }
 });
 
-app.delete('/todos/:id', async (req, res) => {
+app.patch('/todos/:id', async (req, res) => {
   try {
     const todo = await Todo.findById(req.params.id);
     if (!todo) return res.status(404).json({ message: 'Todo not found' })
